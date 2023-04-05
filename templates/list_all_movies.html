@@ -15,6 +15,13 @@
   </thead>
   <tbody>
     <!-- TODO - Render movies in a table with a link on the title to the individual movie page -->
+    {% for x in movies %}
+    <tr>
+      <td><a href="./movies/{{x.movie_id}}">{{x.title}}</a></td>
+      <td>{{x.director}}</td>
+      <td>{{x.rating}}</td>
+    </tr>
+    {% endfor %}
   </tbody>
 </table>
 {% endblock %}
